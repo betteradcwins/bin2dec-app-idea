@@ -34,3 +34,14 @@ const convertDec2Bin = (value) =>
     () => parseInt(value, 10).toString(2),
     'Please, only enter numbers between 0 and 9.', value)
 
+function changeTitle(elem) {
+    const strong1 = document.querySelector('[strong-1]')
+    const strong2 = document.querySelector('[strong-2]')
+    if (elem.id === 'binary') {
+        strong1.innerHTML = 'Binary'
+        strong2.innerHTML = 'decimal'
+    } else {
+        strong2.innerHTML = 'binary'
+        strong1.innerHTML = 'Decimal'
+    }
+}

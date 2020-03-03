@@ -61,3 +61,11 @@ body {
 .container > input:focus {
     background-color: #8882;
 }
+
+.alert {
+    background-color: #ff04;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: #660;
+}

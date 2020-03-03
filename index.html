@@ -8,11 +8,13 @@
 <body>
     <main>
         <div class="container">
-            <h1><strong class="orange">Binary</strong> to <strong class="blue">decimal</strong> converter.</h1>
+            <h1><strong strong-1 class="orange">Binary</strong> to <strong strong-2 class="blue">decimal</strong> converter.</h1>
             <input class="orange" type="text" id="binary"
-        placeholder="Binary..." onkeyup="convertBin2Dec(this.value)"/>
+                placeholder="Binary..." onkeyup="convertBin2Dec(this.value)"
+                onclick="changeTitle(this)" />
             <input class="blue" type="text" id="decimal"
-                placeholder="Decimal..." onkeyup="convertDec2Bin(this.value)"/>
+                placeholder="Decimal..." onkeyup="convertDec2Bin(this.value)"
+                onclick="changeTitle(this)"/>
         </div>
     </main>
     <script src="index.js">
