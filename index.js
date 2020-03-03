@@ -32,7 +32,7 @@ const convertBin2Dec = (value) =>
 const convertDec2Bin = (value) => 
     convert('binary', /^[0-9]+$/g,
     () => parseInt(value, 10).toString(2),
-    'Please, only enter numbers between 0 and 9.', value)
+    'Please, only enter numbers.', value)
 
 function changeTitle(elem) {
     const strong1 = document.querySelector('[strong-1]')
