@@ -13,7 +13,8 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    text-align: center;
+    margin-top: 50px;
     padding: 20px;
 }
 
@@ -28,6 +29,10 @@ body {
 
 .blue {
     color:#6495ed;
+}
+
+.green {
+    color: #2e8b57;
 }
 
 .container > input {
@@ -54,6 +59,10 @@ body {
     color: #6495ed50;
 }
 
+.container > input.green::placeholder {
+    color: #2e8b5750;
+}
+
 .container > input:focus::placeholder {
     color: #fff0;
 }
@@ -68,4 +77,5 @@ body {
     font-size: 1.2em;
     border-radius: 10px;
     color: #660;
+    text-align: left;
 }
