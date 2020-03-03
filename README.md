@@ -32,7 +32,8 @@ constraints:
 ## Bonus features
 
 -   [x] User can enter a variable number of binary digits
--   [x] User can convert decimal to binary
+-   [x] User can convert decimal to binary and hexadecimal
+-   [x] User can convert hexdecimal to binary and hexadecimal
 ## Useful links and resources
 
 [Binary number system](https://en.wikipedia.org/wiki/Binary_number)
