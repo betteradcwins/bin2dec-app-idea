@@ -10,8 +10,10 @@ const createAlert = message => {
     }
 }
 
+const removeChild = (selector, child) => document.querySelector(selector).removeChild(child) 
+
 function convert(ids, regex, callback, message, value) {
-    if (hasAlert()) document.querySelector('.container').removeChild(hasAlert())
+    if (hasAlert()) removeChild('.container', hasAlert())
     
     ids.forEach((id, i) => {
         const num = document.getElementById(id)
@@ -30,14 +32,14 @@ const convertBin2DecAndHex = (value) =>
     convert(['decimal','hexadecimal'],
     /^[0-1]+$/g, 
     () => [parseInt(value, 2),
-        parseInt(value, 2).toString(16)], 
+        parseInt(value, 2).toString(16).toUpperCase()], 
     'Please, only enter 0 or 1.', value)
 
 const convertDec2BinAndHex = (value) => 
     convert(['binary','hexadecimal'],
     /^[0-9]+$/g,
     () => [parseInt(value, 10).toString(2),
-        parseInt(value, 10).toString(16)],
+        parseInt(value, 10).toString(16).toUpperCase()],
     'Please, only enter numbers.', value)
 
 const convertHex2BinAndDec = (value) => 
@@ -48,20 +50,25 @@ const convertHex2BinAndDec = (value) =>
     'Please, only enter numbers or letters between A to F.',
      value)
 
+const setContent = (elem, innerHTML, className) => {
+    elem.innerHTML = innerHTML
+    elem.className = className
+}
 
 function changeTitle(elem) {
-    const strongs = document.querySelectorAll('strong')
+    const [strong1, strong2, strong3] = document.querySelectorAll('strong')
+
     if (elem.id === 'binary') {
-        strongs[0].innerHTML = 'Binary'
-        strongs[1].innerHTML = 'decimal'
-        strongs[2].innerHTML = 'hexadecimal'
-    } else if (elem.id === 'decimal'){
-        strongs[0].innerHTML = 'Decimal'
-        strongs[1].innerHTML = 'binary'
-        strongs[2].innerHTML = 'hexadecimal'
+        setContent(strong1, 'Binary', 'orange')
+        setContent(strong2, 'decimal', 'blue')
+        setContent(strong3, 'hexadecimal', 'green')
+    } else if (elem.id === 'decimal') {
+        setContent(strong1, 'Decimal', 'blue')
+        setContent(strong2, 'binary', 'orange')
+        setContent(strong3, 'hexadecimal', 'green')
     } else {
-        strongs[0].innerHTML = 'Hexadecimal'
-        strongs[1].innerHTML = 'binary'
-        strongs[2].innerHTML = 'decimal'
+        setContent(strong1, 'Hexadecimal', 'green')
+        setContent(strong2, 'decimal', 'blue')
+        setContent(strong3, 'binary', 'orange')
     }
 }
