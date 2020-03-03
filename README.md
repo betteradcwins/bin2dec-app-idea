@@ -1,5 +1,7 @@
 # Bin2Dec
 
+## Deploy at: https://betteradcwins.github.io/bin2dec-app-idea/
+
 **Idea From:** https://github.com/florinpop17/app-ideas
 
 **Tier:** 1-Beginner
